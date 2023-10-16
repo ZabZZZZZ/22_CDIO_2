@@ -1,0 +1,34 @@
+@startuml
+skinparam sequenceMessageAlign center
+
+actor Spillere as p
+participant Interface as int
+participant Spil as game
+participant PointsManager as pm
+participant TernKaster as DiceRoller
+participant Summer as SumCalculator
+
+p -> int: Begynd Applikationen
+int -> p: Anmode Om Spillernes Navne
+p -> int: Input Navne
+int -> game: Tildel Spillernes Navne
+int -> p: Anmode Om Hvilke Terninger Skal Bruges
+p -> int: Vaelg Terninger
+p -> int: Begynd Spillet
+game <- game: Begge Spillere Starter Med 1000 Points
+
+loop Indtil En Spiller Har 3000 Points
+    game -> DiceRoller : Kast 2 Terninger
+    DiceRoller -> SumCalculator: Regn Summen Af 2 Terninger
+    SumCalculator -> DiceRoller: Return Summen
+    DiceRoller -> pm: Plus/Minus Points Fra Spillerens Score
+    pm -> game: Return Points Og Den Nye Score
+    game -> int: Vis Points Som Spilleren Fik
+    game -> int: Vis Spillerens Nuvaerende Score
+    game <- game: Naeste Spillers Tur
+end
+
+game -> int: Spillet Er Afsluttet
+game -> int: Vinderen Bliver Vist
+
+@enduml

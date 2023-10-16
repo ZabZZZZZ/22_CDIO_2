@@ -4,7 +4,7 @@ public class DiceSelect{
 
 
     // Laver en dice med x value
-    // Scanner skal hente value, og kalde denne funktion med værdien af integer
+    // Scanner skal hente value, og kalde denne funktion med værdien fra scanneren som (som int)
     public CreateDice(int value) {
 
         this.value = value;

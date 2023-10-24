@@ -10,9 +10,13 @@ class Player {
         this.points = points;
     }
 
-    public String toString() {
+    public String getName() {
+        return this.name;
 
-        return this.name + " har " + this.points + " points.";
+    }
+
+    public int getPoints() {
+        return this.points;
     }
 
 

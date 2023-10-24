@@ -14,7 +14,7 @@ class App {
         Player player2 = new Player(Namechecker.checkName(2, s));
 
 
-        System.out.println("Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
+        System.out.println(System.lineSeparator() + "Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
         
         while(true) {
             //Player 1 rolls

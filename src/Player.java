@@ -1,25 +1,29 @@
 class Player {
 
-    public String name;
-    public int points;
+    private String name;
+    private int points;
+    private Account account;
 
 
-
-    public Player (String name, int points) {
+    public Player (String name) {
         this.name = name;
-        this.points = points;
+        this.account = new Account(1000);
     }
 
     public String getName() {
         return this.name;
-
     }
 
     public int getPoints() {
         return this.points;
     }
 
+    public void withdraw(int amount) {
+        account.withdraw(amount);
+    }
 
-
+    public void deposit(int amount) {
+        account.deposit(amount);
+    }
 }
 

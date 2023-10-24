@@ -1,9 +1,18 @@
 class Account{
-    int Balance;
-    private Account(int balance){
-        this.Balance = balance;
+    private int balance;
+
+    public Account(int balance){
+        this.balance = balance;
     }
-    int GetBalance(){
-        return this.Balance;
+    public int GetBalance(){
+        return this.balance;
+    }
+
+    public void withdraw(int amount) {
+        this.balance -= amount;
+    }
+
+    public void deposit(int amount) {
+        this.balance += amount;
     }
 }

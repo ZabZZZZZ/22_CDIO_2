@@ -18,31 +18,23 @@ public class FeltListe {
         return this.fieldDescription;
     }
 
-    public int getEffect() {
-        return this.Effect;
-    }
-
     //Methods
-    public String toString() {
-        return null;
-    }
-
-    public void useEffect(Player player, int sum) {
-        var amount = getAmount(sum);
-        if (amount < 0) {
-            player.withdraw(amount);
+    public void useEffect(Player player) {
+        if (this.Effect < 0) {
+            player.withdraw(this.Effect);
         }
         else {
-            player.deposit(amount);
+            player.deposit(this.Effect);
         }
     }
 
     public void showFieldInfo() {
-        System.out.println(/* Field info */);
+        System.out.println(getFieldDescription());
     }
 
     public void landOnField(Player player) {
-
+        useEffect(player);
+        showFieldInfo();
     }
 
     //A method to get the amount to be added or subtracted from the players account

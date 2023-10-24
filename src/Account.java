@@ -1,4 +1,4 @@
-private class Account{
+class Account{
     int Balance;
     private Account(int balance){
         this.Balance = balance;

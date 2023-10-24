@@ -1,4 +1,4 @@
-public class WinnerChecker {
+class WinnerChecker {
     public static void checkWinner(int player1Points, int player2Points, String name1, String name2) {
         if(player1Points >= 3000 && player2Points >= 3000){
             if (player1Points > player2Points)

@@ -9,7 +9,10 @@ class Account{
     }
 
     public void withdraw(int amount) {
-        this.balance -= amount;
+        this.balance -= Math.abs(amount);
+
+        if (this.balance < 0)
+        this.balance = 0;
     }
 
     public void deposit(int amount) {

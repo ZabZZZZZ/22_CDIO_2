@@ -1,30 +1,22 @@
 import java.util.Scanner;
 
-public class Namechecker {
-    public static void checkName(String p1, String p2) {
-        Scanner scanner = new Scanner(System.in);
-        boolean isNameSame = true;
+class Namechecker {
+    public static String checkName(int n, Scanner s) {
+        boolean isNameEmpty = true;
+        var p = "";
         
-        while (isNameSame) {
-            System.out.print("Spiller 1, indtast dit navn: ");
-            p1 = scanner.nextLine();
+        System.out.print("Spiller " + n + ", indtast dit navn: ");
+        
+        while (isNameEmpty) {
+            p = s.nextLine();
 
-            System.out.print("Spiller 2, indtast dit navn: ");
-            p2 = scanner.nextLine();
+            if (p.isEmpty() == false) {
+                break;
+            }
 
-            if (p1.isEmpty() || p2.isEmpty()) {
-                System.out.println("Spillerne skal have et navn. Prøv igen.");
-            }
-            else if (p1.equals(p2)) {
-                System.out.println("Spillernavne kan ikke være ens. Prøv igen.");
-            }
-            else {
-                isNameSame = false;
-            }
+            System.out.println("Spilleren skal have et navn. Prøv igen.");
         }
-
-        System.out.println("Spiller 1 er " + p1 + " og spiller 2 er " + p2);
-        scanner.close();
+        return p;
     }
 }
 

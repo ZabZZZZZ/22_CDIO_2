@@ -1,9 +1,7 @@
 class Player {
 
     private String name;
-    private int points;
     private Account account;
-
 
     public Player (String name) {
         this.name = name;
@@ -15,7 +13,7 @@ class Player {
     }
 
     public int getPoints() {
-        return this.points;
+        return account.GetBalance();
     }
 
     public void withdraw(int amount) {

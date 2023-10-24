@@ -1,4 +1,4 @@
-public class DiceSelecter{
+class DiceSelecter{
 
     private int value;
 

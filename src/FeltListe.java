@@ -1,4 +1,4 @@
-public class FeltListe {
+class FeltListe {
     private int fieldNumber;
     private String fieldDescription;
     private int Effect;

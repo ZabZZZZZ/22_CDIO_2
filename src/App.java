@@ -1,15 +1,54 @@
-public class App {
-    public static void main(String[] args) throws Exception {
+class App {
+    public static void main(String[] args) {
+        var s = new java.util.Scanner(System.in);
+
         Introduktion.intro();
 
-        String player1Name = "";
-        String player2Name = "";
+        String temp = "";
 
-        Namechecker.checkName(player1Name, player2Name);
+        Player player1 = new Player(Namechecker.checkName(1, s));
+        Player player2 = new Player(Namechecker.checkName(2, s));
 
-        Player player1 = new Player(player1Name);
-        Player player2 = new Player(player2Name);
+        var die1 = 0;
+        var die2 = 0;
 
+        System.out.println("Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
         
+        while(true) {
+            //Player 1 rolls
+            die1 = Dice.rollDice();
+            die2 = Dice.rollDice();
+            
+            System.out.println(player1.getName() + " slår " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
+
+            //Points are checked and added or subtracted
+            SumChecker.checkSum(die1, die2, player1);
+
+            System.out.println(player1.getName() + " har nu " + player1.getPoints() + " points.");
+            System.out.println("Tryk Enter for at fortsætte" + System.lineSeparator());
+
+            temp = s.nextLine();
+            
+            //Player 2 rolls
+            die1 = Dice.rollDice();
+            die2 = Dice.rollDice();
+
+            //Points are checked and added or subtracted
+            SumChecker.checkSum(die1, die2, player2);
+
+            System.out.println(player2.getName() + " har nu " + player2.getPoints() + " points.");
+            System.out.println("Tryk Enter for at fortsætte" + System.lineSeparator());
+
+            temp = s.nextLine();
+
+            if (player1.getPoints() >= 3000 || player2.getPoints() >= 3000)
+            break;
+        }
+        s.close();
+
+        if (player1.getPoints() > 3000)
+        System.out.println(player1.getName() + " har vundet spillet");
+        else
+        System.out.println(player2.getName() + " har vundet spillet");
     }
 }

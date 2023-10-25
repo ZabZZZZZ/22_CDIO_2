@@ -24,7 +24,7 @@ class App {
             System.out.println(player1.getName() + " slår " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
 
             //Points are checked and added or subtracted
-            SumChecker.checkSum(die1, die2, player1);
+            SumChecker.checkSum(die1, die2, player1, s);
 
             System.out.println(player1.getName() + " har nu " + player1.getPoints() + " points.");
             System.out.println("Tryk Enter for at fortsætte" + System.lineSeparator());
@@ -38,7 +38,7 @@ class App {
             System.out.println(player2.getName() + " slår " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
 
             //Points are checked and added or subtracted
-            SumChecker.checkSum(die1, die2, player2);
+            SumChecker.checkSum(die1, die2, player2, s);
 
             System.out.println(player2.getName() + " har nu " + player2.getPoints() + " points.");
             System.out.println("Tryk Enter for at fortsætte" + System.lineSeparator());

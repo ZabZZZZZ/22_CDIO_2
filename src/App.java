@@ -13,6 +13,7 @@ class App {
         Player player1 = new Player(Namechecker.checkName(1, s));
         Player player2 = new Player(Namechecker.checkName(2, s));
 
+        Namechecker.isNameSame(player1, player2);
 
         System.out.println(System.lineSeparator() + "Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
         

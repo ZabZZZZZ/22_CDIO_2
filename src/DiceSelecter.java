@@ -1,51 +1,7 @@
 class DiceSelecter{
-
-    private int value;
-
-    // Laver en dice med x value
-    // Scanner skal hente value, og kalde denne funktion med værdien fra scanneren som (som int)
-    public DiceSelecter(int value) {
-
-        this.value = value;
-
+    //Dont look ;(
+    public static void selectDice() {
+        System.out.println("Du har valgt at bruge to terninger med 6 sider hver." + System.lineSeparator());
     }
-
-
-    //Returnerer valuen af dice, skal bruges af RNG til Dice Roll
-    public int DiceReturn(){
-
-        return this.value;
-
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+//Vi kunne ikke rigtigt finde ud af hvad der skulle blive gjort med dice selecting saa...

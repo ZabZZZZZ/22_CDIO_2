@@ -24,7 +24,7 @@ class Namechecker {
             p1.setName("Spiller 1");
             p2.setName("Spiller 2");
 
-            System.out.println(System.lineSeparator() + "Du har skrevet samme navn ind for begge spillere, saa de bliver aendret til Player 1 og Player 2");
+            System.out.println(System.lineSeparator() + "Du har skrevet samme navn ind for begge spillere, saa de bliver aendret til Spiller 1 og Spiller 2");
         }
     }
 }

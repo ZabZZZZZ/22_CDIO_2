@@ -10,11 +10,14 @@ class App {
         var die1 = 0;
         var die2 = 0;
 
+        //Create and initialize players
         Player player1 = new Player(Namechecker.checkName(1, s));
         Player player2 = new Player(Namechecker.checkName(2, s));
 
+        //Checking if name is same
         Namechecker.isNameSame(player1, player2);
 
+        //Game begins
         System.out.println(System.lineSeparator() + "Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
         
         while(true) {
@@ -52,6 +55,7 @@ class App {
         }
         s.close();
 
+        //Checking who won
         WinCheck.checkWinner(player1, player2);
     }
 }

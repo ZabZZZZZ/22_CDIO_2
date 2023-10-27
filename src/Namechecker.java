@@ -14,7 +14,7 @@ class Namechecker {
                 break;
             }
 
-            System.out.println("Spilleren skal have et navn. Prøv igen.");
+            System.out.println("Spilleren skal have et navn. Proev igen.");
         }
         return p;
     }

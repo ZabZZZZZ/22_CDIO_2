@@ -12,6 +12,10 @@ class Player {
         return this.name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getPoints() {
         return account.GetBalance();
     }

@@ -26,6 +26,7 @@ class SumChecker{
                 for (int j = 0; j < fields.length; j++) {
                     if (sum == 10) {
                         fields[10].landOnField(player);
+                        break;
                     }
                     else if (sum == fields[j].getFieldNumber()) {
                         fields[j].landOnField(player);

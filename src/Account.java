@@ -8,14 +8,16 @@ class Account{
         return this.balance;
     }
 
-    public void withdraw(int amount) {
+    public int withdraw(int amount) {
         this.balance -= Math.abs(amount);
 
         if (this.balance < 0)
         this.balance = 0;
+
+        return this.balance;
     }
 
-    public void deposit(int amount) {
-        this.balance += amount;
+    public int deposit(int amount) {
+        return this.balance += amount;
     }
 }

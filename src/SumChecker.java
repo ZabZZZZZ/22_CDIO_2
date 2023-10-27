@@ -22,13 +22,15 @@ class SumChecker{
                 sum = die1 + die2;
 
                 System.out.println(player.getName() + " slår " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
+
+                if (sum == 10) {
+                    System.out.println("Du slog 10 igen, saa du bliver rykket til feltet nummer 12");
+                    fields[10].landOnField(player);
+                    break;
+                }
                 
                 for (int j = 0; j < fields.length; j++) {
-                    if (sum == 10) {
-                        fields[10].landOnField(player);
-                        break;
-                    }
-                    else if (sum == fields[j].getFieldNumber()) {
+                    if (sum == fields[j].getFieldNumber()) {
                         fields[j].landOnField(player);
                         break;
                     }

@@ -20,7 +20,7 @@ class App {
         DiceSelecter.selectDice();
 
         //Game begins
-        System.out.println(System.lineSeparator() + "Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
+        System.out.println("Spillet begynder med " + player1.getName() + "'s tur." + System.lineSeparator());
 
         while(true) {
             //Player 1 rolls

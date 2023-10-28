@@ -12,7 +12,7 @@ class SumChecker{
             if (sum == 10) {
                 fields[8].landOnField(player);
 
-                System.out.println("Tryk Enter for at fortsætte" + System.lineSeparator());
+                System.out.println("Tryk Enter for at fortsaette" + System.lineSeparator());
 
                 var temp = s.nextLine();
 
@@ -21,7 +21,7 @@ class SumChecker{
 
                 sum = die1 + die2;
 
-                System.out.println(player.getName() + " slår " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
+                System.out.println(player.getName() + " slaar " + die1 + " og " + die2 + ", hvilket giver " + (die1 + die2));
 
                 if (sum == 10) {
                     System.out.println("Du slog 10 igen, saa du bliver rykket til feltet nummer 12");
@@ -52,7 +52,7 @@ class SumChecker{
         retFields[0] = new FeltListe(2, "Prinsessen i taarnet gav dig 250 points!", 250);
         retFields[1] = new FeltListe(3, "Du blev ramt af en meteor og du tabte 100 point i sandbunkerne fra krateret.", -100);
         retFields[2] = new FeltListe(4, "Du er naaet til Amalienborg og dronning Margrete kastede 100 points paa dig.", 100);
-        retFields[3] = new FeltListe(5, "Du koobte en frakke for at undslippe kulden for 20 points.", -20);
+        retFields[3] = new FeltListe(5, "Du koebte en frakke for at undslippe kulden for 20 points.", -20);
         retFields[4] = new FeltListe(6, "Du naar til Kings Landing og Jamie Lannister giver dig 180 points.", 180);
         retFields[5] = new FeltListe(7, "Monkene i byen har intet til overs saa du faar eller mister ingenting.", 0);
         retFields[6] = new FeltListe(8, "Juiced up Batman stjaeler 70 points fra dig.", -70);
